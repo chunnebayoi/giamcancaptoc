@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giảm cân gấp rút 12kg/4 tuần</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #004aad;
+    }
+    .section {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      animation: fadeIn 0.5s ease;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #dbeeff;
+    }
+    .tick {
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .tick.done {
+      color: green;
+      font-weight: bold;
+    }
+    .complete-message {
+      display: none;
+      color: green;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .nav-buttons button {
+      margin: 4px;
+      padding: 8px 16px;
+      background-color: #004aad;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .nav-buttons button:hover {
+      background-color: #003b8b;
+    }
+    .week-banner {
+      padding: 8px 16px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 12px;
+      border-radius: 12px;
+    }
+    .week-1-color { background: #5cb85c; }
+    .week-2-color { background: #f0ad4e; }
+    .week-3-color { background: #5bc0de; }
+    .week-4-color { background: #d9534f; }
+    .progress-bar {
+      height: 20px;
+      background: #e6e6e6;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .progress-bar-inner {
+      height: 100%;
+      background: #28a745;
+      border-radius: 10px;
+      width: 0%;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      transition: width 0.5s ease;
+    }
+    .image-thumb {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🔥 Giảm cân gấp rút 12kg/4 tuần</h1>
+
+  <div class="progress-bar">
+    <div class="progress-bar-inner" id="progress-inner">0%</div>
+  </div>
+
+  <div class="section nav-buttons">
+    <strong>Đi tới tuần:</strong>
+    <button onclick="jumpTo('week-1')">Tuần 1</button>
+    <button onclick="jumpTo('week-2')">Tuần 2</button>
+    <button onclick="jumpTo('week-3')">Tuần 3</button>
+    <button onclick="jumpTo('week-4')">Tuần 4</button>
+  </div>
+
+  <div class="section">
+    <h2>🎯 Mục tiêu hiện tại và sau 4 tuần</h2>
+    <p><strong>Hiện tại:</strong> Cao 1m72, nặng 80kg</p>
+    <p><strong>Mục tiêu:</strong> Cao 1m75*, nặng 68kg</p>
+    <p><em>*Chiều cao có thể không thay đổi, nhưng dáng sẽ "cao" hơn do thẳng lưng, giảm mỡ, săn người.</em></p>
+    <p><strong>Lời khen:</strong> Bạn đang bắt đầu một hành trình tuyệt vời! Cơ thể bạn sẽ thay đổi ngoạn mục nếu kiên trì.</p>
+    <p><strong>Lời khuyên:</strong> Ngủ đủ, ăn sạch, tập đều và tin vào bản thân mỗi ngày.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔍 Bảng tổng quan 4 tuần</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tuần</th>
+          <th>Vùng tập trung</th>
+          <th>Món ăn chính</th>
+          <th>Cường độ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Tuần 1</td><td>Bụng + Đùi</td><td>Trứng, yến mạch, ức gà</td><td>Vừa</td></tr>
+        <tr><td>Tuần 2</td><td>Đùi</td><td>Khoai lang, cá hồi, đậu phụ</td><td>Vừa – Cao</td></tr>
+        <tr><td>Tuần 3</td><td>Toàn thân</td><td>Salad, đậu, bông cải</td><td>Cao</td></tr>
+        <tr><td>Tuần 4</td><td>Bụng + Đùi + Mông</td><td>Thịt bò, sinh tố, rau luộc</td><td>Cao</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🕒 Thời gian biểu mỗi ngày</h2>
+    <ul>
+      <li><strong>Thức dậy:</strong> 4h30 sáng</li>
+      <li><strong>Chạy hoặc tập sáng:</strong> 5h00 – 5h40</li>
+      <li><strong>Bữa sáng (nếu ăn):</strong> 6h00 – 6h15</li>
+      <li><strong>Ăn trưa:</strong> 11h30 – 12h00</li>
+      <li><strong>Tập chiều/Gym:</strong> 16h30 – 17h30</li>
+      <li><strong>Ăn tối:</strong> Trước 18h30</li>
+      <li><strong>Ngủ:</strong> 21h30 – 21h45</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🥗 Mẹo ăn uống & Tránh xa</h2>
+    <ul>
+      <li><strong>Nên ăn:</strong> trứng, ức gà, rau xanh, yến mạch, khoai lang, trái cây ít ngọt, sữa chua không đường, đậu phụ, cá</li>
+      <li><strong>Tránh:</strong> nước ngọt, đồ chiên, bánh mì trắng, cơm trắng, snack, bánh kẹo ngọt, nước có gas</li>
+      <li><strong>Mẹo:</strong> uống 2–2.5 lít nước/ngày, nhai chậm, chia nhỏ bữa ăn, ăn trước 18h30, ngủ đúng giờ</li>
+    </ul>
+  </div>
+
+  <div id="weeks-container"></div>
+
+  <p class="complete-message" id="final-message">
+    🎉 Bạn đã hoàn thành toàn bộ hành trình 4 tuần! Cơ thể bạn chắc chắn đã thay đổi rõ rệt! Hãy tiếp tục duy trì nhé!
+  </p>
+
+  <script>
+    const weeks = [
+      {
+        name: 'Tuần 1', id: 'week-1', color: 'week-1-color',
+        days: ['Chạy 4km + HIIT Bụng', 'Chạy 4km + HIIT Đùi', 'Nhảy dây + Gym Tay + Bụng', 'Chạy 4km + HIIT Đùi', 'Đi bộ + Gym nhẹ + Plank', 'Chạy 4km + HIIT Đùi/Mông', 'Đi bộ nhẹ + Giãn cơ'],
+        food: 'Trứng luộc, yến mạch, ức gà, súp rau củ, chuối, táo, sữa hạt'
+      },
+      {
+        name: 'Tuần 2', id: 'week-2', color: 'week-2-color',
+        days: ['Chạy 4km + Bụng', 'Chạy + Đùi', 'Cardio + Bụng', 'Chạy + Đùi', 'Đi bộ nhanh + Gym nhẹ', 'HIIT Đùi/Mông + Plank', 'Đi bộ thư giãn + Giãn cơ'],
+        food: 'Trứng, khoai lang, cá hồi/đậu phụ, canh rong biển, trái cây ít đường'
+      },
+      {
+        name: 'Tuần 3', id: 'week-3', color: 'week-3-color',
+        days: ['Chạy + HIIT Bụng', 'Chạy + HIIT Đùi', 'Cardio + Tay', 'Đùi + Lưng', 'Đi bộ + Plank', 'Chạy + Bụng', 'Thư giãn + giãn cơ'],
+        food: 'Salad rau trộn, ức gà áp chảo, đậu đen, bông cải xanh, sữa chua không đường'
+      },
+      {
+        name: 'Tuần 4', id: 'week-4', color: 'week-4-color',
+        days: ['Cardio + Bụng', 'Chạy 4km + Đùi', 'HIIT Bụng + Plank', 'Đùi/Mông + Lunge', 'Đi bộ + Gym nhẹ', 'Chạy + Tổng hợp', 'Giãn cơ thư giãn + Review kết quả'],
+        food: 'Trứng + yến mạch, thịt bò nạc luộc, rau luộc, táo xanh, sinh tố ít đường'
+      }
+    ];
+
+    const weeksContainer = document.getElementById("weeks-container");
+
+    weeks.forEach((week, index) => {
+      const section = document.createElement("div");
+      section.className = "section";
+      section.id = week.id;
+
+      const banner = document.createElement("div");
+      banner.className = `week-banner ${week.color}`;
+      banner.innerText = week.name;
+      section.appendChild(banner);
+
+      const title = document.createElement("h3");
+      title.innerText = `📝 Bài tập hàng ngày:`;
+      section.appendChild(title);
+
+      const table = document.createElement("table");
+      const thead = document.createElement("thead");
+      thead.innerHTML = `<tr><th>Thứ</th><th>Bài tập</th><th>✓</th></tr>`;
+      table.appendChild(thead);
+
+      const tbody = document.createElement("tbody");
+      week.days.forEach((day, i) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `<td>Thứ ${i+2 <= 7 ? i+2 : 'Chủ nhật'}</td><td>${day}</td><td class="tick" data-week="${index}">⬜</td>`;
+        tbody.appendChild(row);
+      });
+      table.appendChild(tbody);
+      section.appendChild(table);
+
+      const food = document.createElement("p");
+      food.innerHTML = `<strong>🍽️ Thực đơn tuần này:</strong> ${week.food}`;
+      section.appendChild(food);
+
+      const message = document.createElement("p");
+      message.className = "complete-message";
+      message.id = `week-complete-${index}`;
+      message.innerText = `✅ Hoàn thành ${week.name} – Tuyệt vời lắm!`;
+      section.appendChild(message);
+
+      weeksContainer.appendChild(section);
+    });
+
+    document.addEventListener("click", e => {
+      if (e.target.classList.contains("tick")) {
+        e.target.classList.toggle("done");
+        e.target.textContent = e.target.classList.contains("done") ? "✓" : "⬜";
+        checkWeeks();
+      }
+    });
+
+    function checkWeeks() {
+      let total = 0;
+      let completed = 0;
+      weeks.forEach((_, i) => {
+        const weekTicks = document.querySelectorAll(`.tick[data-week='${i}']`);
+        const doneCount = Array.from(weekTicks).filter(el => el.classList.contains("done")).length;
+        const message = document.getElementById(`week-complete-${i}`);
+        message.style.display = doneCount === weekTicks.length ? "block" : "none";
+        total += weekTicks.length;
+        completed += doneCount;
+      });
+      const final = document.getElementById("final-message");
+      final.style.display = completed === total ? "block" : "none";
+      document.getElementById("progress-inner").style.width = `${(completed/total*100).toFixed(0)}%`;
+      document.getElementById("progress-inner").innerText = `${(completed/total*100).toFixed(0)}%`;
+    }
+
+    function jumpTo(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
